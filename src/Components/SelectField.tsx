@@ -1,10 +1,10 @@
 import { useForm } from '../Store/FormContext';
 import { ITextField } from '../Type/Typex';
 
-function SelectField({ placeholder, title, name }: ITextField) {
+function SelectField({ placeholder, title, name, errMassage }: ITextField) {
   const { state, dispatch }: any = useForm();
   return (
-    <div className="w-full  2xl:w-[300px]">
+    <div className="w-full  xl:w-[300px]">
       <div className="flex items-center mb-2 mr-1 gap-1">
         <div className="w-2 h-4 rounded-sm bg-yellow-500 "></div>
         <h2>{title}</h2>
@@ -13,13 +13,15 @@ function SelectField({ placeholder, title, name }: ITextField) {
         value={state[name]}
         name={name}
         onChange={(e) => {
-          console.log(e.target.name);
           dispatch({
             type: 'UPDATE-VALUE',
             payload: {
               key: e.target.name,
               value: e.target.value,
             },
+          });
+          dispatch({
+            type: 'AUTH-genre',
           });
         }}
         placeholder={placeholder}
@@ -44,6 +46,7 @@ function SelectField({ placeholder, title, name }: ITextField) {
         <option value="کمدی">کمدی</option>
         <option value="معمایی">معمایی</option>
       </select>
+      <p>{errMassage}</p>
     </div>
   );
 }

@@ -13,7 +13,6 @@ function TextAreaField({ placeholder, title, name }: ITextField) {
         value={state[name]}
         name={name}
         onChange={(e) => {
-          console.log(e.target.name);
           dispatch({
             type: 'UPDATE-VALUE',
             payload: {

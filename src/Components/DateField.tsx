@@ -1,7 +1,7 @@
 import { IFormProvider, useForm } from '../Store/FormContext';
 import { ITextField } from '../Type/Typex';
 
-function TextField({ placeholder, title, name, errMassage }: ITextField) {
+function DateField({ placeholder, title, name, errMassage }: ITextField) {
   const { state, dispatch }: any = useForm();
 
   return (
@@ -14,6 +14,7 @@ function TextField({ placeholder, title, name, errMassage }: ITextField) {
         value={state[name]}
         name={name}
         onChange={(e) => {
+          console.log(e.target.name);
           dispatch({
             type: 'UPDATE-VALUE',
             payload: {
@@ -29,7 +30,7 @@ function TextField({ placeholder, title, name, errMassage }: ITextField) {
         }}
         placeholder={placeholder}
         className="w-full bg-transparent border rounded py-2 outline-none px-2 placeholder:text-xs"
-        type="text"
+        type="date"
         onFocus={(e) => {
           const el = e.target;
           el.style.backgroundColor = '#59564D';
@@ -46,4 +47,4 @@ function TextField({ placeholder, title, name, errMassage }: ITextField) {
   );
 }
 
-export default TextField;
+export default DateField;

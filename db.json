@@ -1,0 +1,36 @@
+{
+  "movies": [
+    {
+      "movieName": "sdfasd",
+      "genre": "عاشقانه",
+      "director": "asdf",
+      "productionYear": "2023-05-20",
+      "info": "sdfsdfsd",
+      "id": 1683743739465,
+      "errorMovieName": "",
+      "errorGenre": "",
+      "errorDirector": "",
+      "errorProductYear": "",
+      "statusMovieName": true,
+      "statusDirector": true,
+      "statusProductYear": true,
+      "statusGenre": true
+    },
+    {
+      "movieName": "sds",
+      "genre": "عاشقانه",
+      "director": "asdf",
+      "productionYear": "2023-05-20",
+      "info": "sdfsdfsd",
+      "id": 1683743762825,
+      "errorMovieName": "",
+      "errorGenre": "",
+      "errorDirector": "",
+      "errorProductYear": "",
+      "statusMovieName": true,
+      "statusDirector": true,
+      "statusProductYear": true,
+      "statusGenre": true
+    }
+  ]
+}
